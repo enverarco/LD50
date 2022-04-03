@@ -858,6 +858,7 @@ public class AstarPath : VersionedMonoBehaviour {
 
 		navmeshUpdates.Update();
 
+		Scan();
 		// Execute blocking actions such as graph updates
 		// when not scanning
 		if (!isScanning) {

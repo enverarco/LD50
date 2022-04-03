@@ -36,9 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\InvokeReaper.cs" />
      <Compile Include="Assets\scripts\AgeTimer.cs" />
      <Compile Include="Assets\scripts\PlayerController.cs" />
-     <Compile Include="Assets\scripts\InvokeReaper.cs" />
+     <Compile Include="Assets\scripts\shoot.cs" />
+     <Compile Include="Assets\scripts\bullet.cs" />
+     <Compile Include="Assets\KillOnTouch.cs" />
+     <Compile Include="Assets\Enemy.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/2020.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
