@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public bool canShoot = true;
 
     public GameObject GameOverScreen;
+    public GameObject WinScreen;
+
 
     private void Awake(){
         canShoot = true;
@@ -43,9 +45,9 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
 
-        if((Input.GetKeyDown("space") || Input.GetKey(KeyCode.Mouse0)) && canShoot){
+       /* if((Input.GetKeyDown("space") || Input.GetKey(KeyCode.Mouse0)) && canShoot){
             StartCoroutine(shootGun());
-        }
+        }*/
 
         mousePos = Input.mousePosition;
 
@@ -88,6 +90,10 @@ public class PlayerController : MonoBehaviour
        private void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Enemy"){
             GameOverScreen.SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+         if(other.tag == "Exit"){
+            WinScreen.SetActive(true);
             Time.timeScale = 0.0f;
         }
     }
